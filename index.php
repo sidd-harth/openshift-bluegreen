@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-3 col-md-offset-3">
           <h2>Application Information</h2>
           <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -101,19 +101,19 @@
               </tr>
               <tr>
                 <td>Hit Count</td>
-                <td><?php echo  $data -> username; ?></td>
+                td><?php echo  $data -> username ?></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-3 col-md-offset-3">
           <h2>Application Example</h2>
           <p>
             <img src="image.php">
           </p>
         </div>
       </div>
-	  <div class="col-md-6 col-md-offset-3">
+	  <div class="col-md-3 col-md-offset-3">
           <h2>Application Information</h2>
           <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -125,16 +125,16 @@
             <tbody>
               <tr>
                 <td>Discount</td>
-                <td>$data -> email;</td>
+                <td>$data -> email</td>
               </tr>
               <tr>
                 <td>Pod Port</td>
-                <td>$data -> website;</td>
+                <td>$data -> website</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-3 col-md-offset-3">
           <h2>Application Example</h2>
           <p>
             <img src="image.php">
