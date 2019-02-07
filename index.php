@@ -1,3 +1,22 @@
+<?php 
+				$url="https://jsonplaceholder.typicode.com/users/1";
+
+				$client=curl_init($url);
+
+				curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
+				$result=curl_exec($client);
+
+				curl_close($client);
+				$data =  json_decode($result);
+				echo  $data -> name;
+				echo  $data -> email;
+				echo  $data -> username;
+				
+				
+
+
+		 ?>
+		 
 <!DOCTYPE html>
 <!--[if IE 9]><html class="ie9"><![endif]-->
 <!--[if gt IE 9]><!-->
@@ -62,7 +81,7 @@
             <li>Basic</li>
           </ol>
           <h1>Welcome to an OpenShift Application!</h1>
-          <p>The purpose of this application is to demonstrate Blue-Green Deployment</p>
+          <p>The purpose of this application is to demonstrate several interesting features about OpenShift. We hope you enjoy it!</p>
         </div>
       </div>
       <div class="row">
@@ -78,11 +97,39 @@
             <tbody>
               <tr>
                 <td>Pod IP</td>
-                <td><?php echo $_SERVER['SERVER_ADDR'] ?></td>
+                <td>$data -> name</td>
+              </tr>
+              <tr>
+                <td>Hit Count</td>
+                <td><?php echo  $data -> username; ?></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+          <h2>Application Example</h2>
+          <p>
+            <img src="image.php">
+          </p>
+        </div>
+      </div>
+	  <div class="col-md-6 col-md-offset-3">
+          <h2>Application Information</h2>
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Env Var</th>
+                <th>Value</th>
+              <tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Discount</td>
+                <td>$data -> email;</td>
               </tr>
               <tr>
                 <td>Pod Port</td>
-                <td><?php echo $_SERVER['SERVER_PORT'] ?></td>
+                <td>$data -> website;</td>
               </tr>
             </tbody>
           </table>
